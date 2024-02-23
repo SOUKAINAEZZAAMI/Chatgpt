@@ -28,11 +28,7 @@ public class exchangeController {
            return     exchangeGPTservice.addExange(question,userId);
         //return exchangeGPT;
     }
-    @PostMapping("/ask")
-    public ResponseEntity<String> askQuestion(@RequestBody String question) {
-        String response = gptService.askChatGpt(question);
-        return new ResponseEntity<>(response, HttpStatus.OK);
-    }
+
     @GetMapping("/users/user/{userId}/exchanging")
     public List<exchange> getAllPropsGPTByUser(@PathVariable long userId) {
         return exchangeGPTservice.getAllPropsGPT(userId);
