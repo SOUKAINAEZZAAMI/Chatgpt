@@ -1,6 +1,7 @@
 package org.gpt.interactionchatgpt.service;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 import org.gpt.interactionchatgpt.model.user;
 import org.gpt.interactionchatgpt.repository.userRepository;
@@ -36,4 +37,5 @@ public class userService {
         }
 
     }
+
 }

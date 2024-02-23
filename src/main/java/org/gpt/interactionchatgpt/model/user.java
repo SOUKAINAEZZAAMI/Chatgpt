@@ -14,12 +14,13 @@ import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-@Entity
+@Entity(name = "users")
+
 @Data @AllArgsConstructor @NoArgsConstructor
 public class user {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
     private String username;
     private String password;
     @JsonManagedReference
